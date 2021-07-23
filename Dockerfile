@@ -1,7 +1,7 @@
 FROM klakegg/hugo:0.78.2-alpine AS build
 RUN apk add -U git
 COPY . /src
-RUN mkdir /opt/IBM/HTTPServer
+RUN mkdir -p /opt/IBM/HTTPServer
 RUN mkdir /work 
 RUN touch /work/ihsstart.sh
 RUN chmod -R g=u /opt/IBM/HTTPServer /work/ihsstart.sh
